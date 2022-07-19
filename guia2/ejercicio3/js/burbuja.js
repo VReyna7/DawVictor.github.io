@@ -65,6 +65,9 @@ function inicializar(){
         //Lazo para ingresar los elementos ingresados en el arreglo
         contenido += "<table>\n\t<tbody>\n\t\t<tr>\n";
         //Lazo que muestra los elementos del arreglo en una tabla
+          for(i=0; i<max; i++){
+           contenido += "\t\t\t<td class=\"Off\">" + numeros[i] + "</td>\n";
+           }
         contenido += "\t\t</tr>\n\t</tbody>\n</table>\n<br />\n\n";
         //Lazo que ordena el arreglo mediante el método de la burbuja
         for(i=0; i<max-1; i++){
