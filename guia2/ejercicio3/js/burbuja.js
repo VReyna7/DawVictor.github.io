@@ -58,35 +58,40 @@ function inicializar(){
             datos.innerHTML = contenido;
         }
 
+
         if(seleccion==2){
-                var datos = document.getElementById('datos');
-        with(document){
-        contenido += "<h1>Números ingresados</h1>\n";
-        //Lazo para ingresar los elementos ingresados en el arreglo
-        contenido += "<table>\n\t<tbody>\n\t\t<tr>\n";
-        //Lazo que muestra los elementos del arreglo en una tabla
-          for(i=0; i<max; i++){
-           contenido += "\t\t\t<td class=\"Off\">" + numeros[i] + "</td>\n";
-           }
-        contenido += "\t\t</tr>\n\t</tbody>\n</table>\n<br />\n\n";
-        //Lazo que ordena el arreglo mediante el método de la burbuja
-        for(i=0; i<max-1; i++){
-            for(j=i+1; j<max; j++){
-                if(numeros[i]<numeros[j]){
-                aux = numeros[j];
-                numeros[j] = numeros[i];
-                 numeros[i] = aux;
-               }
+            var datos = document.getElementById('datos');
+            with(document){
+            contenido += "<h1>Números ingresados</h1>\n";
+            //Lazo para ingresar los elementos ingresados en el arreglo
+            contenido += "<table>\n\t<tbody>\n\t\t<tr>\n";
+            //Lazo que muestra los elementos del arreglo en una tabla
+            for(i=0; i<max; i++){
+            contenido += "\t\t\t<td class=\"Off\">" + numeros[i] + "</td>\n";
             }
-    }
-        contenido += "<h1>Números ordenados Descendente</h1>\n";
-        contenido += "<table>\n\t<tbody>\n\t\t<tr>\n";
-        //Lazo que muestra los elementos del arreglo que han sido
-        //ordenados con el método de la burbuja
-        contenido += "\t\t</tr>\n\t</tbody>\n</table>\n";
+            contenido += "\t\t</tr>\n\t</tbody>\n</table>\n<br />\n\n";
+            //Lazo que ordena el arreglo mediante el método de la burbuja
+            for(i=0; i<max-1; i++){
+                for(j=i+1; j<max; j++){
+                    if(numeros[i]<numeros[j]){
+                    aux = numeros[j];
+                    numeros[j] = numeros[i];
+                     numeros[i] = aux;
+                   }
+                }
         }
-        datos.innerHTML = contenido;
+            contenido += "<h1>Números ordenados Desendentemente</h1>\n";
+            contenido += "<table>\n\t<tbody>\n\t\t<tr>\n";
+            //Lazo que muestra los elementos del arreglo que han sido
+            //ordenados con el método de la burbuja
+            for(i=0; i<max; i++) {
+            contenido += "\t\t\t<td class=\"Off\">" + numeros[i] + "</td>\n";
+            }
+            contenido += "\t\t</tr>\n\t</tbody>\n</table>\n";
+            }
+            datos.innerHTML = contenido;
         }
+
     }
     
     //Capturando los elemento con clase Off
